@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Όνομα Κοπελάς | Κιν. Λειτουργός</title>
+    <link rel="stylesheet" href="socialwork.css">
+</head>
+<body>
+
+    <!-- Επάνω Μπάρες Πλοήγησης -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Μιχελάκη Μαριάντζελα</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Αρχική</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Σχετικά</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Υπηρεσίες</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Επικοινωνία</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Ενότητα Αρχική / Ηρώο -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Καλώς ήρθατε στον χώρο μου</h1>
+            <p>Είμαι κοινωνική λειτουργός με πάθος για την υποστήριξη των ανθρώπων. Εδώ θα βρείτε ένα ασφαλές περιβάλλον για να μιλήσουμε.</p>
+            <a href="#contact" class="cta-button">Κλείστε Ραντεβού</a>
+        </div>
+    </section>
+
+    <!-- Ενότητα Σχετικά Με Εμένα -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Σχετικά Με Εμένα</h2>
+            <div class="about-content">
+                <img src="img/socialworker.jpg" alt="Φωτογραφία Προφίλ [Όνομα]" class="profile-img">
+                <div class="about-text">
+                    <p>Είμαι πτυχιούχος κοινωνικής εργασίας με 5 χρόνια εμπειρίας. Ειδικεύομαι στην υποστήριξη οικογενειών, εφήβων, ατόμων με άγχος. Πιστεύω στη δύναμη της ενδυνάμωσης και της συναισθηματικής στήριξης.</p>
+                    <!-- Βάλε εδώ τα πτυχία, τα σεμινάρια, τις εμπειρίες της -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ενότητα Υπηρεσίες -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Υπηρεσίες</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Ατομικές Συμβουλευτικές Συνάντησεις</h3>
+                    <p>Προσωπικές συνεδρίες για την αντιμετώπιση προσωπικών ή συναισθηματικών δυσκολιών.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Οικογενειακή Θεραπεία</h3>
+                    <p>Υποστήριξη οικογενειών στη βελτίωση της επικοινωνίας και της λήψης αποφάσεων.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ομαδικά Προγράμματα</h3>
+                    <p>Ομάδες στήριξης και ενημέρωσης για συγκεκριμένα θέματα (π.χ. διαχείριση άγχους).</p>
+                </div>
+                <!-- Πρόσθεσε όσες υπηρεσίες προσφέρει -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Ενότητα Επικοινωνία & Ραντεβού -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Κλείστε ένα Ραντεβού</h2>
+            <p>Επικοινωνήστε μαζί μου για να συζητήσουμε τις ανάγκες σας και να κανονίσουμε τη πρώτη μας συνάντηση.</p>
+
+            <div class="contact-wrapper">
+                <!-- Φόρμα Επικοινωνίας -->
+                <form id="appointmentForm" class="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Το Ονοματεπώνυμό σας" required>
+                    <input type="email" id="email" name="email" placeholder="Το Email σας" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Το Τηλέφωνό σας">
+                    <textarea id="message" name="message" placeholder="Περιγράψτε εν συντομία το αίτημά σας..." rows="5"></textarea>
+                    <button type="submit" class="cta-button">Αποστολή Αιτήματος</button>
+                </form>
+
+                <!-- Πληροφορίες Επικοινωνίας -->
+                <div class="contact-info">
+                    <h3>Στοιχεία Επικοινωνίας</h3>
+                    <p><strong>Email:</strong> email.tis@paradeigma.gr</p>
+                    <p><strong>Τηλέφωνο:</strong> +30 210 123 4567</p>
+                    <p><strong>Διεύθυνση:</strong> Οδός Παραδείγματος 123, Αθήνα</p>
+                    <!-- Μπορείς να βάλεις και χάρτη από Google Maps -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Υποσέλιδο -->
+    <footer>
+        <p>&copy; 2023 Όνομα Κοπελάς. Με επιφύλαξη παντός δικαιώματος.</p>
+    </footer>
+
+    <script src="socialwork.js"></script>
+</body>
+</html>
