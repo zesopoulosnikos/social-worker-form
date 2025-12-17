@@ -8,6 +8,7 @@
 body {
     line-height: 1.6;
     color: #333;
+    background: #ffffff;
 }
 
 .container {
@@ -17,10 +18,10 @@ body {
     padding: 4rem 0;
 }
 
-/* Νavigation Bar */
+/* ========== NAVBAR ========== */
 .navbar {
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #1a5f7a; /* Βαθύ μπλε-πράσινο */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -31,13 +32,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;        
+    padding: 1rem 5%;
 }
 
 .nav-logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: white;
     text-decoration: none;
 }
 
@@ -47,37 +48,24 @@ body {
 }
 
 .nav-item {
-    margin-left: 2rem;   
+    margin-left: 2rem;
 }
 
 .nav-link {
     text-decoration: none;
-    color: #2c3e50;
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
 
 .nav-link:hover {
-    color: #3498db;/*Ένα ωραίο μπλε */
+    color: #57cc99; /* Φρέσκο πράσινο */
+    transform: translateY(-2px);
 }
 
-/* Hero Section */
-
-/* ΤΡΕΧΟΝ CSS */
+/* ========== HERO SECTION ========== */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Ένα όμορφο gradient */
-    color: white;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
-}
-
-/* TODO: MOBILE_OPTIMIZATION - ΒΕΛΤΙΣΤΟ ΓΙΑ PC & ΚΙΝΗΤΟ
-.hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a5f7a 0%, #38a3a5 100%); /* Μπλε gradient */
     color: white;
     min-height: 100vh;
     height: 100svh;
@@ -91,156 +79,476 @@ body {
 
 .hero-content h1 {
     font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .hero-content p {
     font-size: clamp(1rem, 3vw, 1.2rem);
-    margin-bottom: 2rem;
-}
-*/
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-}
-
+/* ========== CTA BUTTONS ========== */
 .cta-button {
     display: inline-block;
-    background: #e74c3c; /* Ένα ζωντανό χρώμα για το κουμπί */
+    background: #57cc99; /* Ζωντανό πράσινο */
     color: white;
-    padding: 0.8rem 2rem;
+    padding: 1rem 2.5rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
     font-size: 1.1rem;
-    transition: background 0.3s;
+    font-weight: 600;
+    transition: all 0.3s;
     cursor: pointer;
+    box-shadow: 0 6px 20px rgba(87, 204, 153, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .cta-button:hover {
-    background: #c0392b;
+    background: #38a3a5; /* Τιρκουάζ */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(87, 204, 153, 0.4);
 }
 
-/* About Section */
+/* ========== ABOUT SECTION ========== */
 .about {
-    background: #f9f9f9;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.profile-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.about-text {
-    flex: 1;
-    min-width: 300px;
+    background: #f8fdfb; /* Πολύ απαλό πράσινο */
 }
 
 .about h2 {
     text-align: center;
     font-size: 2.8rem;
-    color: #2c3e50;
+    color: #1a5f7a;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #57cc99;
+    border-radius: 2px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(26, 95, 122, 0.15);
+    border: 5px solid white;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ========== SERVICES SECTION ========== */
+.services {
+    background: white;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #1a5f7a;
     margin-bottom: 3rem;
     font-weight: 600;
 }
 
-/* Services Section */
-
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     margin-top: 2rem;
 }
 
 .service-card {
-    background: #fff5f0;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     text-align: center;
-    transition: transform 0.3s;
+    transition: all 0.3s;
+    border-top: 5px solid #57cc99;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #57cc99, #38a3a5);
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 .service-card h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
+    color: #1a5f7a;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
 }
 
-/* Contact Section */
+.service-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ========== GALLERY SECTION ========== */
+.gallery {
+    background: #f0f7f9; /* Ανοιχτό μπλε φόντο */
+    padding: 4rem 0;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #1a5f7a;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.gallery p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    background: white;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 450px;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(26, 95, 122, 0.8);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: #1a5f7a;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    background: rgba(26, 95, 122, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid white;
+}
+
+.dot.active,
+.dot:hover {
+    background: #1a5f7a;
+    transform: scale(1.2);
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact {
+    background: white;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #1a5f7a;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contact > .container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
 
 .contact-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
     margin-top: 2rem;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 1rem;
+    padding: 1.2rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
+    transition: all 0.3s;
+    background: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #57cc99;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(87, 204, 153, 0.1);
+    background: white;
+}
+
+.contact-form button[type="submit"] {
+    margin-top: 1rem;
 }
 
 .contact-info {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 10px;
+    background: #f0f7f9;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-left: 5px solid #57cc99;
 }
 
-/* Footer */
+.contact-info h3 {
+    color: #1a5f7a;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    color: #555;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact-info strong {
+    color: #1a5f7a;
+    min-width: 90px;
+}
+
+/* ========== FOOTER ========== */
 footer {
-    background: #2c3e50;
+    background: #1a5f7a;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
-/* Ανταποκριση για κινητά */
+footer p {
+    opacity: 0.9;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+    .carousel-slide img {
+        max-height: 400px;
+    }
+    
+    .contact-wrapper {
+        gap: 3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         flex-direction: column;
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        background: #1a5f7a;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 2rem 0;
     }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
+    
     .about-content {
         flex-direction: column;
         text-align: center;
+        gap: 3rem;
     }
+    
+    .profile-img {
+        width: 280px;
+        height: 280px;
+    }
+    
     .contact-wrapper {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .carousel-slide img {
+        max-height: 350px;
+    }
+    
+    .carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    .carousel-dots {
+        bottom: 15px;
     }
 }
 
-
-
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 3rem 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .about h2,
+    .services h2,
+    .gallery h2,
+    .contact h2 {
+        font-size: 2.2rem;
+    }
+    
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .carousel-slide img {
+        max-height: 250px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .dot {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 1rem;
+    }
+    
+    .contact-info {
+        padding: 2rem 1.5rem;
+    }
+}
